@@ -1,0 +1,120 @@
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.container {
+    display: flex;
+    max-width: 80%;
+    block-size: fit-content;
+    width: 100%;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.left-column, .right-column {
+    padding: 40px;
+    flex: 1;
+}
+
+.left-column {
+    background-color: transparent;
+    text-align: center;
+}
+
+.left-column h1 {
+    font-family: "Finger Paint", sans-serif;
+    font-size: 50px;
+}
+
+.left-column p {
+    font-family: "Finger Paint", sans-serif;
+    font-size: 20px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-column h2 {
+    font-family: "Finger Paint", sans-serif;
+    font-size: 40px;
+}
+
+.right-column label {
+    font-family: "Finger Paint", sans-serif;
+}
+
+.right-column button {
+    padding: 10px;
+    background-color: transparent;
+    color: #000; 
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.right-column button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.right-column form {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 20px;
+}
+
+.right-column input {
+    background-color: transparent;
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: "Finger Paint", sans-serif;
+    font-size: 18px;
+}
+
+.logout-banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out, fadeOut 0.5s ease-out 2.5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}

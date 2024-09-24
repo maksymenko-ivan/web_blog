@@ -1,0 +1,116 @@
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+main .settings-data{
+    position: relative;
+    text-align: center;
+    font-family: "Finger Paint", sans-serif;
+}
+
+main h1{
+    font-size: 50px;
+}
+
+main p{
+    font-size: 30px;
+}
+main .info-label {
+    font-size: 25px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+main .changer {
+    border-radius: 14px;
+    border: 2px solid black; 
+    background-color: transparent;
+    padding:    10px 20px;
+    margin-left: 30px;
+    font-size: 15px;
+    font-family: "Finger Paint", sans-serif;    
+    cursor: pointer;
+    opacity: 0.75;
+    width: 200px;
+}
+
+main .changer:hover {
+    opacity: 1;
+}
+
+main .info-input{ 
+    padding: 3px 10px;
+    margin-left: 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: "Finger Paint", sans-serif;    
+    font-size: 20px;
+}
+
+main .table-username{ 
+    padding: 3px 10px;
+    margin-left: 30px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: transparent;
+    font-family: "Finger Paint", sans-serif;    
+    font-size: 20px;
+}
+
+main .settings-change-data{
+    text-align: left;
+}
+
+main .input-password{
+    margin-left: 35px;
+}
+
+/* Success Banner */
+.success-banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out, fadeOut 0.5s ease-out 2.5s forwards;
+}
+
+.unsuccess-banner {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.5s ease-out, fadeOut 0.5s ease-out 2.5s forwards;
+}
+
+@keyframes slideDown {
+    from {
+        top: -50px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
