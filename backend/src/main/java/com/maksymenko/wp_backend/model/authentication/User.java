@@ -2,6 +2,7 @@ package com.maksymenko.wp_backend.model.authentication;
 
 
 import com.maksymenko.wp_backend.model.ModelId;
+import com.maksymenko.wp_backend.model.images.Image;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -29,6 +30,14 @@ public class User extends ModelId implements UserDetails{
     @Enumerated(value = EnumType.STRING)
     @Column(name = "role")
     private Role role;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "users_images",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "image_id")
+    )
+    private Image image;
 
     public String getFirstName() {
         return firstName;
@@ -93,5 +102,13 @@ public class User extends ModelId implements UserDetails{
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public Image getImage() {
+        return image;
+    }
+
+    public void setImage(Image image) {
+        this.image = image;
     }
 }

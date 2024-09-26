@@ -21,6 +21,5 @@ public class TokenCleanupService {
     public void cleanExpiredTokens() {
         LocalDateTime now = LocalDateTime.now();
         blacklistedTokenRepository.deleteByExpiryDateBefore(now);
-        System.out.println("Deleted expired tokens at " + now);
     }
 }

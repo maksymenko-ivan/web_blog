@@ -36,6 +36,7 @@ public class SecurityConfig {
                         req -> req
                                 .requestMatchers("/api/v1/login/**", "/api/v1/register/**", "/api/v1/auth").permitAll()  // Allow these endpoints without authentication
                                 .requestMatchers("/api/v1/me", "/api/v1/change-first-name", "/api/v1/logout").authenticated() // Protect the new endpoint
+                                .requestMatchers("/api/v1/upload-image", "api/v1/download-image/").authenticated()
                                 .anyRequest().authenticated()  // All other requests require authentication
                 )
                 .userDetailsService(userDetailsServiceIpm)
